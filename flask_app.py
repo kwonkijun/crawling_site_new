@@ -1,11 +1,16 @@
 from flask import Flask, render_template, request
 import sqlite3
+import os
+
+# 절대 경로를 사용해야지 호스팅에서 경로를 읽을 수 있다
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+db_path = os.path.join(BASE_DIR, "myblog.db")
 
 app = Flask(__name__)
 
 @app.route('/', methods=['GET'])
 def index():
-    conn = sqlite3.connect('myblog.db')
+    conn = sqlite3.connect(db_path)
     cursor = conn.cursor()
 
     # 페이지 번호 가져오기 (기본값은 1)
