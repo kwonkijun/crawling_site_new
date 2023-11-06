@@ -119,16 +119,25 @@ body {
   justify-content: flex-end;
 }
 
-
 /*
  * Blog posts
  */
+.col > h4 {
+  margin-bottom: 0;
+}
+
 .blog-post {
   margin-bottom: 4rem;
 }
 .blog-post-meta {
   margin-bottom: 1.25rem;
   color: #727272;
+}
+
+.blog-date {
+  --bs-text-opacity: 1;
+  color: var(--bs-secondary-color)!important;
+  margin-bottom: 0.25rem;
 }
 
 .wrapper {
