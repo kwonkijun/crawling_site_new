@@ -368,7 +368,7 @@
         }
         });
     }
-  
+    loadMorePosts();
     // 스크롤 이벤트 리스너를 추가하여 페이지 끝에 도달했을 때 loadMorePosts 함수를 호출합니다.
     $(window).scroll(function() {
       if ($(window).scrollTop() + $(window).height() >= $(document).height() - 100) { // 페이지 하단에서 100px 이내로 스크롤되면
